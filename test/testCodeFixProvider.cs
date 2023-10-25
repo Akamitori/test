@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2020-2023 DeNA Co., Ltd.
+﻿// Copyright (c) 2020-2023 Akamitori Co., Ltd.
 // This software is released under the MIT License.
 
 using System.Collections.Immutable;
@@ -13,14 +13,14 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Rename;
 
-namespace RoslynAnalyzerTemplate
+namespace test
 {
-    [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(RoslynAnalyzerTemplateCodeFixProvider)), Shared]
-    public class RoslynAnalyzerTemplateCodeFixProvider : CodeFixProvider
+    [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(testCodeFixProvider)), Shared]
+    public class testCodeFixProvider : CodeFixProvider
     {
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
-            get { return ImmutableArray.Create(RoslynAnalyzerTemplate.DiagnosticId); }
+            get { return ImmutableArray.Create(test.DiagnosticId); }
         }
 
         public sealed override FixAllProvider GetFixAllProvider()

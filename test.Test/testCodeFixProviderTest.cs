@@ -1,4 +1,4 @@
-// Copyright (c) 2020-2023 DeNA Co., Ltd.
+// Copyright (c) 2020-2023 Akamitori Co., Ltd.
 // This software is released under the MIT License.
 
 using System.IO;
@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Verify = Microsoft.CodeAnalysis.CSharp.Testing.NUnit.CodeFixVerifier<
-    RoslynAnalyzerTemplate.RoslynAnalyzerTemplate,
-    RoslynAnalyzerTemplate.RoslynAnalyzerTemplateCodeFixProvider>;
+    test.test,
+    test.testCodeFixProvider>;
 
-namespace RoslynAnalyzerTemplate.Test;
+namespace test.Test;
 
 [TestFixture]
-public class RoslynAnalyzerTemplateCodeFixProviderTest
+public class testCodeFixProviderTest
 {
     /// <summary>
     /// Test codefix provider for lowercase type name make uppercase
